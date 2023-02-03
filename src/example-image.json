@@ -1,0 +1,11 @@
+{
+  "date":"2014-02-04T03:30:01.210000",
+  "id":"LANDSAT/LC08/C01/T1_SR/LC08_127059_20140204",
+  "resource":
+    {
+      "dataset":"LANDSAT/LC08/C01/T1_SR",
+      "planet":"earth"
+    },
+  "service_version":"v5000",
+  "url":"https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/thumbnails/645e548eec897fc558c8c39d8652b547-344f51df0762ddc3a1333054ab9ae42b:getPixels"
+}

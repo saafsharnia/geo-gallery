@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import type {GeoJSONType} from "../../types/geoTypes";
+import type {GeoJSONType} from "@/types/geoTypes";
 import type {PropType} from "vue";
 
 export default {
