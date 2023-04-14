@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import MapMarker from "@/components/Map/Marker.vue";
+import MapMarker from "@/components/Map/MapMarker.vue";
 import randomLocations from "../utils/randomLocations";
 import type {ImageWithLocation} from "@/types/geoTypes"
 
