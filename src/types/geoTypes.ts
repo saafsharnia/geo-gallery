@@ -1,11 +1,8 @@
-export interface GeoLocationsType {
-    type: string,
-    coordinates: [number, number]
-}
 
-export interface GeoJSONType {
+export interface ImageWithLocation {
     id: number,
-    type: string,
-    name: string,
-    geometry: GeoLocationsType
+    lat: number,
+    lng: number,
+    image: string,
+    coordinates: [number, number]
 }

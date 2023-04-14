@@ -6,43 +6,36 @@
       mapStyle="light-v10"
     >
       <MapMarker
-        v-for="geoJson in geoJsons"
-        :key="geoJson.id"
-        :geoJson="geoJson"
+        v-for="location in locations"
+        :key="location.id"
+        :geoJson="location"
       />
     </mapbox-map>
   </div>
 </template>
 
-<script>
-import MapMarker from "../components/Map/Marker.vue";
+<script lang="ts">
+import MapMarker from "@/components/Map/Marker.vue";
+import randomLocations from "../utils/randomLocations";
+import type {ImageWithLocation} from "@/types/geoTypes"
+
 export default {
-  name: "MapContainer",
-  components: { MapMarker },
-  data() {
-    return {
-      geoJsons: [
-        {
-          id: 1,
-          type: "Feature",
-          name: "Germany",
-          geometry: {
-            type: "Point",
-            coordinates: [10, 50],
-          },
+    name: "MapContainer",
+    components: { MapMarker },
+    data() {
+        return {
+            locations: [] as ImageWithLocation[],
+        };
+    },
+    created() {
+        this.getLocations();
+    },
+    methods: {
+        getLocations() {
+            this.locations = randomLocations.getLocationsWithImages();
         },
-        {
-          id: 2,
-          type: "Feature",
-          name: "Croatia",
-          geometry: {
-            type: "Point",
-            coordinates: [15, 45],
-          },
-        },
-      ],
-    };
-  },
+    },
+
 };
 </script>
 
