@@ -35,7 +35,7 @@ const randomLocations = (() => {
     const getRandomImage = (): string => {
         let randomImage;
         do {
-            randomImage = `https://picsum.photos/200/300?random=${Math.floor(Math.random() * 1000)}`;
+            randomImage = `https://picsum.photos/500/500?random=${Math.floor(Math.random() * 1000)}`;
         } while (usedImages.has(randomImage));
         usedImages.add(randomImage);
         return randomImage;

@@ -41,7 +41,6 @@ export default {
 
 <style>
 .basemap {
-  width: 800px !important;
   height: 800px !important;
 }
 </style>

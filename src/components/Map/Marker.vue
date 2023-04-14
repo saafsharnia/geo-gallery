@@ -1,8 +1,7 @@
 <template>
     <mapbox-marker :lngLat="geoJson.coordinates">
         <mapbox-popup>
-            <div> I am the content of an attached Popup{{geoJson.image}}</div>
-            <div>the location is {{geoJson.lat}} {{geoJson.lng}}</div>
+            <img :src="geoJson.image" :alt="`[${geoJson.lat},${geoJson.lng}]`">
         </mapbox-popup>
     </mapbox-marker>
 </template>
